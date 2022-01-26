@@ -127,6 +127,25 @@ try {
     //executa a query
     return $this->execute($query);
   }
+
+  /**
+   * Método responsavel por executar atualizações no banco de dados
+   * @param string $where
+   * @param array $values [ field => value ]
+   * @return boolean
+   */
+
+  public function update($where,$values){
+ //dados da query
+ $fields = array_keys($values);
+
+    //monta a query
+    $query = 'UPDATE '.$this->table.' SET '.implode('=?,',$fields). '=? WHERE '.$where;
+
+    //executar a query
+    $this->execute($query,array_values($values));
+  }
+
 }
 
 ?>

@@ -6,18 +6,18 @@
   </a>
 </section>
 <div class="container">
-<h2 class="mt-3">Cadastrar Vaga</h2>
+<h2 class="mt-3"><?=TITLE?></h2>
 
 <form action="" method="post">
 
 <div class="form-group mt-2">
     <label>Titulo</label>
-    <input type="text" class="form-control" name="titulo">
+    <input type="text" class="form-control" name="titulo" value="<?=$obVaga->titulo?>">
   </div><!--form-group-->
 
   <div class="form-group mt-2">
     <label>Descrição</label>
-    <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10"></textarea>
+    <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10"><?=$obVaga->descricao?></textarea>
   </div><!--form-group-->
 
   <div class="form-group mt-2 mb-2">
